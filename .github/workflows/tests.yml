@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew style clainstone/tap
+      - run: brew audit --strict --online clainstone/tap/cbirds
+      - run: brew install --build-from-source clainstone/tap/cbirds
+      - run: brew test clainstone/tap/cbirds
+      - run: cbirds --version && cbirds --completion zsh > /dev/null
