@@ -1,8 +1,8 @@
 class Cbirds < Formula
   desc "Flock of birds in your terminal"
   homepage "https://github.com/clainstone/cbirds"
-  url "https://github.com/clainstone/cbirds/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "268b9a2d3f6288f5df8e07ffe956c7140f23a7da62ca0c9261c084df3d373b34"
+  url "https://github.com/clainstone/cbirds/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "eb2dbb911b4cbdc7446c3b7067c7be57aea526e265162721c39aaf52ff2d9eeb"
   license "MIT"
   head "https://github.com/clainstone/cbirds.git", branch: "master"
 
